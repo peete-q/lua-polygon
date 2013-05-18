@@ -1,9 +1,7 @@
-
 CC = g++
-INC_DEP
 CFLAGS = -I../include -I../poly2tri -static-libgcc -static-libstdc++ -g
 LFLAGS = -L../lib -llua51 -L../poly2tri -lpoly2tri -static-libgcc -static-libstdc++
-TARGET = polygon.dll
+TARGET = polygon
 
 SRC = $(wildcard *.cpp)
 OBJ = $(patsubst %.cpp, %.o, $(SRC))

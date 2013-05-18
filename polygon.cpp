@@ -1,4 +1,3 @@
-
 #include <vector>
 
 #include "lua.hpp"
@@ -19,7 +18,7 @@
 static int api_triangulate(lua_State *L)
 {
 	int args = lua_gettop(L);
-	luaL_check(args >= 6, ("need more vertices '%d'", args));
+	luaL_check(args >= 6, "need more vertices '%d'", args);
 	
 	std::vector<p2t::Point*> verts;
 	for (int i = 1; i <= args; i += 2)
